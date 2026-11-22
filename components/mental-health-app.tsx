@@ -126,7 +126,7 @@ export default function MentalHealthApp() {
           </div>
 
           <div className="hero-art">
-            <div className="flex flex-col items-center justify-center gap-4 -mt-30">
+            <div className="flex flex-col items-center justify-center gap-4 -mt-60">
               <Image
                 src="/logo-gapai.png"
                 alt="Logo PT Gapai Cita Rahardjo"
@@ -135,13 +135,7 @@ export default function MentalHealthApp() {
                 style={{ width: '280px', height: 'auto', transform: 'translateX(90px)' }}
             
               />
-              <div className="art-card">
-                <span className="art-icon"><Heart size={18} /></span>
-                <span>
-                  <b>Jaga keseimbangan</b>
-                  <small>Mulai dari memahami diri</small>
-                </span>
-              </div>
+              
             </div>
           </div>
         </section>
