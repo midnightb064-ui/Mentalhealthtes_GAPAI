@@ -126,7 +126,7 @@ export default function MentalHealthApp() {
           </div>
 
           <div className="hero-art">
-            <div className="flex flex-col items-center justify-center gap-4 -mt-60">
+            <div className="flex flex-col items-center justify-center gap-4 -mt-40">
               <Image
                 src="/logo-gapai.png"
                 alt="Logo PT Gapai Cita Rahardjo"
