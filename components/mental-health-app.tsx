@@ -124,18 +124,6 @@ export default function MentalHealthApp() {
               <ShieldCheck size={16} /> Rahasia · Aman · Untuk evaluasi internal HRD
             </div>
           </div>
-
-          <div className="hero-art">
-            <div className="flex flex-col items-center justify-center gap-4 -mt-40">
-              <Image
-                src="/logo-gapai.png"
-                alt="Logo PT Gapai Cita Rahardjo"
-                width={280}
-                height={280}
-                style={{ width: '280px', height: 'auto', transform: 'translateX(90px)' }}
-              />
-            </div>
-          </div>
         </section>
 
         <section className="intro-strip">
