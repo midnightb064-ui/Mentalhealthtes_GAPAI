@@ -133,9 +133,7 @@ export default function MentalHealthApp() {
                 width={280}
                 height={280}
                 style={{ width: '280px', height: 'auto', transform: 'translateX(90px)' }}
-            
               />
-              
             </div>
           </div>
         </section>
