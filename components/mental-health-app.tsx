@@ -132,7 +132,7 @@ export default function MentalHealthApp() {
                 alt="Logo PT Gapai Cita Rahardjo"
                 width={280}
                 height={280}
-                style={{ width: '280px', height: 'auto', transform: 'translateX(110px)' }}
+                style={{ width: '280px', height: 'auto', transform: 'translateX(90px)' }}
             
               />
               <div className="art-card">
