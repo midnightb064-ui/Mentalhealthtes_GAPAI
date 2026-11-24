@@ -438,8 +438,7 @@ export default function MentalHealthApp() {
       {showPasswords[fieldKey] ? <EyeOff size={17} /> : <Eye size={17} />}
     </button>
   )
-
-  if (checkingAdminSession) {
+if (checkingAdminSession && screen === 'admin') {
     return (
       <div className="app-shell">
         <Header onAdmin={openAdmin} onHome={backHome} />
