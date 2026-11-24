@@ -231,12 +231,15 @@ export default function MentalHealthApp() {
     }
   }, [answers, screen, seconds, submitAssessment])
 
+
+
   const startTest = () => {
     setAnswers(emptyAnswers)
     setSeconds(300)
     setStartedAt(Date.now())
     setSubmitError('')
     setScreen('test')
+    window.scrollTo({ top : 0,behavior: 'instant'})
   }
 
   const begin = () => {
