@@ -1,11 +1,28 @@
 import { NextResponse } from 'next/server'
-import { checkAdminCredentials, createAdminSession } from '@/lib/admin-auth'
+import { createAdminSession, verifyAdminCredentials } from '@/lib/admin-auth'
 
 export async function POST(request: Request) {
-  const body = await request.json().catch(() => null)
-  if (!body || !checkAdminCredentials(String(body.username ?? ''), String(body.password ?? ''))) {
-    return NextResponse.json({ error: 'Username atau password tidak sesuai.' }, { status: 401 })
+  try {
+    const body = await request.json().catch(() => null)
+    const auth = await verifyAdminCredentials(
+      String(body?.username ?? ''),
+      String(body?.password ?? '')
+    )
+
+    if (!auth.valid) {
+      return NextResponse.json(
+        { error: 'Username atau password tidak sesuai.' },
+        { status: 401 }
+      )
+    }
+
+    await createAdminSession(auth.sessionVersion)
+    return NextResponse.json({ success: true })
+  } catch (error) {
+    console.error('Admin login error:', error)
+    return NextResponse.json(
+      { error: 'Login tidak dapat diproses saat ini.' },
+      { status: 500 }
+    )
   }
-  await createAdminSession()
-  return NextResponse.json({ success: true })
 }
